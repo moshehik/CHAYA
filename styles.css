@@ -797,6 +797,7 @@ h2.interactive-hero-line:hover {
     gap: 50px;
     position: relative;
     z-index: 2;
+    margin-top: -25px; /* Pull content closer to the title above */
 }
 
 .provider-info {
