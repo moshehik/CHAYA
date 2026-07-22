@@ -274,12 +274,12 @@ h1, h2, h3, h4, h5 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.12); /* שקוף ועדין */
-    backdrop-filter: blur(8px); /* אפקט זכוכית */
+    background: rgba(255, 255, 255, 0.12); /* ׳³ֲ³ײ²ֲ©׳³ֲ³ײ²ֲ§׳³ֲ³׳’ג‚¬ֲ¢׳³ֲ³ײ²ֲ£ ׳³ֲ³׳’ג‚¬ֲ¢׳³ֲ³ײ²ֲ¢׳³ֲ³׳’ג‚¬ֲ׳³ֲ³׳’ג€ֲ¢׳³ֲ³ײ²ֲ */
+    backdrop-filter: blur(8px); /* ׳³ֲ³ײ²ֲ׳³ֲ³׳’ג€ֳ—׳³ֲ³ײ²ֲ§׳³ֲ³ײ»ֲ ׳³ֲ³׳’ג‚¬ג€׳³ֲ³׳’ג‚¬ֳ·׳³ֲ³׳’ג‚¬ֲ¢׳³ֲ³׳’ג‚¬ֳ·׳³ֲ³׳’ג€ֲ¢׳³ֲ³ײ³ג€” */
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
     z-index: -1;
-    /* מתחיל למטה וקטן יותר כדי לעלות ולצוף */
+    /* ׳³ֲ³ײ²ֲ׳³ֲ³ײ³ג€”׳³ֲ³׳’ג‚¬ג€׳³ֲ³׳’ג€ֲ¢׳³ֲ³ײ²ֲ ׳³ֲ³ײ²ֲ׳³ֲ³ײ²ֲ׳³ֲ³ײ»ֲ׳³ֲ³׳’ג‚¬ֲ ׳³ֲ³׳’ג‚¬ֲ¢׳³ֲ³ײ²ֲ§׳³ֲ³ײ»ֲ׳³ֲ³ײ²ֲ ׳³ֲ³׳’ג€ֲ¢׳³ֲ³׳’ג‚¬ֲ¢׳³ֲ³ײ³ג€”׳³ֲ³ײ²ֲ¨ ׳³ֲ³׳’ג‚¬ֳ·׳³ֲ³׳’ג‚¬ֲ׳³ֲ³׳’ג€ֲ¢ ׳³ֲ³ײ²ֲ׳³ֲ³ײ²ֲ¢׳³ֲ³ײ²ֲ׳³ֲ³׳’ג‚¬ֲ¢׳³ֲ³ײ³ג€” ׳³ֲ³׳’ג‚¬ֲ¢׳³ֲ³ײ²ֲ׳³ֲ³ײ²ֲ¦׳³ֲ³׳’ג‚¬ֲ¢׳³ֲ³ײ²ֲ£ */
     transform: translateY(20px) scale(0.95);
     opacity: 0;
     transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
@@ -287,13 +287,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .interactive-hero-line:hover {
-    /* הטקסט כולו צף כלפי מעלה */
+    /* ׳³ֲ³׳’ג‚¬ֲ׳³ֲ³ײ»ֲ׳³ֲ³ײ²ֲ§׳³ֲ³ײ²ֲ¡׳³ֲ³ײ»ֲ ׳³ֲ³׳’ג‚¬ֳ·׳³ֲ³׳’ג‚¬ֲ¢׳³ֲ³ײ²ֲ׳³ֲ³׳’ג‚¬ֲ¢ ׳³ֲ³ײ²ֲ¦׳³ֲ³ײ²ֲ£ ׳³ֲ³׳’ג‚¬ֳ·׳³ֲ³ײ²ֲ׳³ֲ³׳’ג€ֳ—׳³ֲ³׳’ג€ֲ¢ ׳³ֲ³ײ²ֲ׳³ֲ³ײ²ֲ¢׳³ֲ³ײ²ֲ׳³ֲ³׳’ג‚¬ֲ */
     transform: translateY(-12px);
     text-shadow: 0 8px 25px rgba(0, 0, 0, 0.7) !important;
 }
 
 .interactive-hero-line:hover::before {
-    /* הרקע מחליק למעלה ומופיע */
+    /* ׳³ֲ³׳’ג‚¬ֲ׳³ֲ³ײ²ֲ¨׳³ֲ³ײ²ֲ§׳³ֲ³ײ²ֲ¢ ׳³ֲ³ײ²ֲ׳³ֲ³׳’ג‚¬ג€׳³ֲ³ײ²ֲ׳³ֲ³׳’ג€ֲ¢׳³ֲ³ײ²ֲ§ ׳³ֲ³ײ²ֲ׳³ֲ³ײ²ֲ׳³ֲ³ײ²ֲ¢׳³ֲ³ײ²ֲ׳³ֲ³׳’ג‚¬ֲ ׳³ֲ³׳’ג‚¬ֲ¢׳³ֲ³ײ²ֲ׳³ֲ³׳’ג‚¬ֲ¢׳³ֲ³׳’ג€ֳ—׳³ֲ³׳’ג€ֲ¢׳³ֲ³ײ²ֲ¢ */
     transform: translateY(0) scale(1);
     opacity: 1;
 }
@@ -766,24 +766,28 @@ h2.interactive-hero-line:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.9), rgba(244, 248, 250, 0.85), rgba(255, 255, 255, 0.9));
-    background-size: 300% 300%;
-    animation: flowBackground 22s ease-in-out infinite alternate-reverse;
-    z-index: -1;
-    mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
+    background: url('assets/pure_water.jpg') no-repeat;
+    background-size: 120% 120%;
+    animation: waterFlow 40s ease-in-out infinite alternate;
+    z-index: -2;
+    mask-image: linear-gradient(to bottom, transparent 0%, transparent 20%, black 40%, black 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 20%, black 40%, black 100%);
+    opacity: 0.08;
 }
 
 .provider-content {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 50px;
-    box-shadow: var(--drop-shadow);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255,255,255,0.6);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-right: 1px solid rgba(255, 255, 255, 0.8);
     padding: 80px;
 }
 
@@ -796,22 +800,22 @@ h2.interactive-hero-line:hover {
 }
 
 .provider-info {
-    flex: 0 0 58%;
-    max-width: 58%;
+    flex: 0 0 48%;
+    max-width: 48%;
     text-align: start;
 }
 
 .provider-image {
-    flex: 0 0 38%;
-    max-width: 360px;
+    flex: 0 0 60%;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .provider-image img {
     width: 100%;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 95, 115, 0.1);
+    border-radius: 0;
+    box-shadow: none;
     transition: transform 0.5s var(--luxury-ease);
 }
 
@@ -838,6 +842,7 @@ h2.interactive-hero-line:hover {
     font-size: 1.4rem;
     color: var(--luxury-gold);
     font-weight: 700;
+    margin-top: 20px;
     margin-bottom: 25px;
     background: transparent;
     padding: 15px 25px;
@@ -888,11 +893,13 @@ h2.interactive-hero-line:hover {
 
 .provider-main-img {
     width: 100%;
-    max-width: 360px;
+    max-width: 700px;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 95, 115, 0.1);
-    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 72%);
+    mask-image: radial-gradient(circle at center, black 50%, transparent 72%);
+    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .interactive-provider:hover .provider-main-img {
@@ -1515,7 +1522,6 @@ html[lang="en"] .drop-card p {
     0%, 100% { transform: translateY(0) rotate(var(--base-rotate, 0deg)); }
     50% { transform: translateY(-8px) rotate(var(--base-rotate, 0deg)); }
 }
-
 /* --- Registration Modal (Frosted Glass) --- */
 .modal-overlay {
     position: fixed;
@@ -1621,3 +1627,86 @@ html[lang="en"] .drop-card p {
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 0 15px rgba(242, 132, 130, 0.4);
 }
+
+/* --- Reading Animation --- */
+.animated-reading-box {
+    transition: all 0.4s ease;
+}
+
+/* --- Reading Animation --- */
+.animated-reading-box {
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    padding: 0;
+    border: 2px solid transparent;
+    white-space: pre-wrap; /* Ensure spaces between spans are rendered */
+}
+
+.animated-reading-box:hover {
+    background-color: #fcfcfc;
+    border: 2px solid #1a365d; /* Luxury Blue border */
+    border-radius: 12px; /* Rounded box as requested */
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(26, 54, 93, 0.2); /* Luxury Blue shadow */
+}
+
+.animated-reading-box span {
+    display: inline; /* Keep it inline so letters flow naturally and backgrounds touch perfectly */
+}
+
+.animated-reading-box:hover span {
+    animation: paint-text 0.1s linear forwards;
+    animation-delay: calc(var(--char-index) * 0.045s); /* Slow, deliberate reading pace */
+}
+
+@keyframes paint-text {
+    to {
+        background-color: rgba(26, 54, 93, 0.95); /* Luxury Deep Blue */
+        color: #ffffff; /* White letters */
+        text-shadow: 0 0 1px #ffffff, 0 0 1px #ffffff; /* Faux bold to prevent layout shift */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Gentle Hover Text */
+.gentle-hover-text {
+    transition: letter-spacing 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.8s ease;
+    display: inline-block;
+    cursor: default;
+}
+
+.gentle-hover-text:hover {
+    letter-spacing: 1.5px;
+    transform: translateY(-2px);
+}
+
+/* Custom dominant pink hover for the registration button */
+#open-registration-modal:hover {
+    background-color: #ff3385 !important;
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(255, 51, 133, 0.4) !important;
+}
+

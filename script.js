@@ -1,5 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // Character wrapping for continuous reading animation
+    const readingBoxes = document.querySelectorAll('.animated-reading-box');
+    readingBoxes.forEach(box => {
+        const text = box.textContent.trim();
+        box.innerHTML = '';
+        const chars = Array.from(text);
+        chars.forEach((char, index) => {
+            const span = document.createElement('span');
+            span.textContent = char;
+            span.style.setProperty('--char-index', index);
+            box.appendChild(span);
+        });
+    });
+
     // Intersection Observer for Scroll Animations & Luxury Transitions
     const observerOptions = {
         root: null,
