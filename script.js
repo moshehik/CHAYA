@@ -257,7 +257,9 @@ if (regForm) {
     regForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        submitRegBtn.textContent = 'שולח...';
+        const isEnglish = document.documentElement.lang === 'en';
+        
+        submitRegBtn.textContent = isEnglish ? 'Sending...' : 'שולח...';
         submitRegBtn.disabled = true;
         
         const name = document.getElementById('reg-name').value;
@@ -281,7 +283,7 @@ if (regForm) {
         regFormMessage.style.display = 'block';
         if (result && result.success) {
             regFormMessage.style.color = '#3d5a80'; // Success color
-            regFormMessage.textContent = 'תודה רבה! פנייתך נשלחה בהצלחה ואחזור אליך בהקדם.';
+            regFormMessage.textContent = isEnglish ? 'Thank you! Your request has been successfully sent and I will get back to you shortly.' : 'תודה רבה! פנייתך נשלחה בהצלחה ואחזור אליך בהקדם.';
             regForm.reset();
             // Close after 3 seconds on success
             setTimeout(() => {
@@ -289,10 +291,10 @@ if (regForm) {
             }, 3000);
         } else {
             regFormMessage.style.color = '#e91e63'; // Error color
-            regFormMessage.textContent = 'אירעה שגיאה בשליחה. אנא נסי שוב מאוחר יותר.';
+            regFormMessage.textContent = isEnglish ? 'An error occurred during sending. Please try again later.' : 'אירעה שגיאה בשליחה. אנא נסי שוב מאוחר יותר.';
         }
         
-        submitRegBtn.textContent = 'שליחה';
+        submitRegBtn.textContent = isEnglish ? 'Send' : 'שליחה';
         submitRegBtn.disabled = false;
     });
 }
