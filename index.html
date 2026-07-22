@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -38,18 +38,22 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <div class="hero-text-minimal animate-on-scroll fade-up-slow">
-                <span class="hero-provider-name" style="display:block; font-size: 2.8rem; font-weight: 800; color: #e91e63; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">חוה רבקה לנדא</span>
-                <h1 style="margin-top: 0;">הידרותרפיה לנשים לפני לידה</h1>
-                <div class="accent-line"></div>
-                <h2>חצי שעה של רוגע, הקלה והכנה במים</h2>
+                <span class="hero-provider-name interactive-hero-line" style="display:block; font-size: 2.8rem; font-weight: 800; color: #e91e63; margin: 0 auto 15px auto; width: fit-content; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">חוה רבקה לנדא</span>
+                <h1 class="interactive-hero-line" style="margin: 0 auto; width: fit-content;">הידרותרפיה לנשים לפני לידה</h1>
+                <div class="accent-line" style="margin: 15px auto;"></div>
+                <h2 class="interactive-hero-line" style="margin: 0 auto 30px auto; width: fit-content;">חצי שעה של רוגע, הקלה והכנה במים</h2>
                 <a href="#contact" class="cta-button primary-cta mt-4">לתיאום טיפול</a>
             </div>
         </div>
     </header>
 
-    <section class="provider section">
+    <section class="provider section" id="provider-section">
         <div class="container animate-on-scroll fade-up-slow">
             <div class="provider-content">
+                <div class="water-stream-container" id="water-stream-container">
+                    <div class="stream-wave stream-blue"></div>
+                    <div class="stream-wave stream-pink"></div>
+                </div>
                 <div class="provider-split">
                     <div class="provider-info">
                         <h2 class="handwritten" style="font-size: 3.5rem; color: #e91e63;">נעים להכיר, אני חוה רבקה לנדא.</h2>
@@ -59,8 +63,18 @@
                             המטרה שלי היא אחת: להעניק לך חצי שעה של חוסר משקל, שקט מוחלט, והכנה פיזית ומנטלית ללידה. המים עבורי הם הכלי העוצמתי ביותר להוריד את העומס מהגב והאגן, לשחרר את החרדות שלפני הלידה, וללמד אותך לנשום ולהרפות באמת. יצרתי עבורך מרחב בטוח ועוטף – בואי להתנתק מהכל, לסמוך על הגוף שלך ולהגיע לחדר הלידה מתוך רוגע ועוצמה.
                         </p>
                     </div>
-                    <div class="provider-image">
-                        <img src="embracing_hands_heart.jpg" alt="חיבוק מים ולב" />
+                    <div class="provider-image interactive-provider">
+                        <img src="embracing_hands_heart.jpg" alt="חיבוק מים ולב" class="provider-main-img" />
+                        
+                        <!-- Floating Heart Bubbles -->
+                        <div class="heart-bubbles-container">
+                            <div class="hb hb1">♥</div>
+                            <div class="hb hb2">♥</div>
+                            <div class="hb hb3">♥</div>
+                            <div class="hb hb4">♥</div>
+                            <div class="hb hb5">♥</div>
+                            <div class="hb hb6">♥</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,7 +83,7 @@
 
     <section class="benefits section clip-transition" id="benefits">
         <div class="container">
-            <h3 class="section-title animate-on-scroll fade-up-slow">חווית הטיפול והפינוק<span style="color: #e91e63; font-weight: 900; font-size: 1.2em; display: inline-block; transform: rotate(5deg);">!</span></h3>
+            <h3 class="section-title animate-on-scroll fade-up-slow hover-wave-text no-color">חווית הטיפול והפינוק<span style="color: #e91e63; font-weight: 900; font-size: 1.2em; display: inline-block; transform: rotate(5deg);">!</span></h3>
             <div class="drops-grid">
                 
                 <div class="drop-card animate-on-scroll stagger-card" style="--delay: 0.1s">
@@ -155,10 +169,12 @@
                     <div class="title-animation-wrapper">
                         <div class="line-art-wrapper">
                             <!-- Abstract Care / Cradling Hands line art -->
-                            <svg viewBox="0 0 100 100" class="draw-line-svg">
-                                <path class="animated-path" d="M 20,40 C 20,70 50,80 50,80 C 50,80 80,70 80,40" fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round"/>
-                                <path class="animated-path" d="M 30,35 C 30,60 50,65 50,65 C 50,65 70,60 70,35" fill="none" stroke="url(#grad1-pink)" stroke-width="2.5" stroke-linecap="round"/>
-                                <circle class="animated-path" cx="50" cy="45" r="9" fill="none" stroke="url(#grad2)" stroke-width="2.5"/>
+                            <svg viewBox="0 0 100 100" class="draw-line-svg hands-and-heart-svg">
+                                <path class="animated-path hand-outer-left" d="M 20,40 C 20,70 50,80 50,80" fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round"/>
+                                <path class="animated-path hand-outer-right" d="M 50,80 C 50,80 80,70 80,40" fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round"/>
+                                <path class="animated-path hand-inner-left" d="M 30,35 C 30,60 50,65 50,65" fill="none" stroke="url(#grad1-pink)" stroke-width="2.5" stroke-linecap="round"/>
+                                <path class="animated-path hand-inner-right" d="M 50,65 C 50,65 70,60 70,35" fill="none" stroke="url(#grad1-pink)" stroke-width="2.5" stroke-linecap="round"/>
+                                <path class="animated-path flying-heart" d="M 50,55 C 50,55 41,45 41,37 C 41,30 47,28 50,33 C 53,28 59,30 59,37 C 59,45 50,55 50,55 Z" fill="none" stroke="url(#grad2)" stroke-width="2.5" stroke-linejoin="round"/>
                             </svg>
                         </div>
                         <h4>יחס אישי ופינוק</h4>
@@ -172,7 +188,7 @@
 
     <section class="testimonials section clip-transition" id="testimonials">
         <div class="container">
-            <h3 class="section-title animate-on-scroll fade-up-slow">מה אומרות מטופלות<span style="color: #e91e63; font-weight: 900; font-size: 1.2em; display: inline-block; transform: rotate(5deg);">?</span></h3>
+            <h3 class="section-title animate-on-scroll fade-up-slow hover-wave-text">מה אומרות מטופלות<span style="color: #e91e63; font-weight: 900; font-size: 1.2em; display: inline-block; --base-rotate: 5deg; transform: rotate(5deg);">?</span></h3>
             <div class="testimonials-grid memo-board">
                 
                 <div class="testimonial-card memo-note animate-on-scroll stagger-card" style="--delay: 0.1s; transform: rotate(-2deg);">
@@ -217,19 +233,54 @@
 
     <footer class="contact section clip-transition" id="contact">
         <div class="container contact-container animate-on-scroll fade-up-slow">
-            <h3 class="contact-headline">בואי להעניק לעצמך חצי שעה של רוגע וקלילות</h3>
+            <h3 class="contact-headline interactive-footer-line">בואי להעניק לעצמך חצי שעה של רוגע וקלילות</h3>
             <div class="phone-wrapper">
                 <a href="tel:0548498906" class="phone-number pulse-animation">
                     <span class="phone-text">054-849-8906</span>
                 </a>
             </div>
-            <p class="footer-note">הטיפולים מתקיימים בבריכה טיפולית בבית שמש.<br>אני כאן כדי לעטוף אותך, באהבה ובמקצועיות.</p>
+            <div style="margin-top: 25px;">
+                <button id="open-registration-modal" class="cta-button primary-cta" style="background-color: var(--warm-peach); color: white; border: none; cursor: pointer; font-family: var(--font-heading); font-size: 1.3rem;">אני רוצה להירשם!</button>
+            </div>
+            <p class="footer-note" style="line-height: 2;">
+                <span class="interactive-gold-line">הטיפולים מתקיימים בבריכה טיפולית בבית שמש.</span><br>
+                <span class="interactive-gold-line">אני כאן כדי לעטוף אותך, באהבה ובמקצועיות.</span>
+            </p>
         </div>
         <div class="copyright">
             <p class="disclaimer" style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 10px;">* תמונות הבריכות המופיעות באתר הינן להמחשה בלבד.</p>
             <p>&copy; 2026 חוה רבקה לנדא - ספא והידרותרפיה לנשים בהריון.</p>
+            <p style="font-size: 0.8rem; opacity: 0.8; margin-top: 5px;">נערך על ידי Weather דפי נחיתה 0556799588</p>
         </div>
     </footer>
+
+    <!-- Registration Modal -->
+    <div id="registration-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-registration-modal" class="close-btn">&times;</button>
+            <h3 style="margin-bottom: 25px; text-align: center; color: var(--deep-water); font-size: 2rem;">אני רוצה להירשם!</h3>
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="reg-name">שם</label>
+                    <input type="text" id="reg-name" name="שם" autocomplete="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-phone">טלפון</label>
+                    <input type="tel" id="reg-phone" name="טלפון" autocomplete="tel" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-address">כתובת מגורים</label>
+                    <input type="text" id="reg-address" name="כתובת" autocomplete="street-address">
+                </div>
+                <div class="form-group">
+                    <label for="reg-details">פירוט הבקשה</label>
+                    <textarea id="reg-details" name="פירוט" rows="4"></textarea>
+                </div>
+                <button type="submit" class="cta-button primary-cta" style="width: 100%; justify-content: center; background-color: var(--warm-peach); color: white; border: none; margin-top: 10px;" id="submit-reg-btn">שליחה</button>
+            </form>
+            <div id="reg-form-message" style="display:none; text-align:center; margin-top:15px; font-weight:bold; color:var(--deep-water);"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -103,14 +103,15 @@ h1, h2, h3, h4, h5 {
     position: absolute;
     bottom: -150px;
     border-radius: 50%;
-    background: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 30%);
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 60%);
     box-shadow: 
-        inset 0 0 15px rgba(255, 255, 255, 0.5),
-        inset 10px 0 20px rgba(255, 182, 193, 0.3),
-        inset -10px 0 20px rgba(173, 216, 230, 0.3),
-        inset 0 -15px 20px rgba(255, 255, 224, 0.2),
-        0 5px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+        inset 0 0 20px rgba(255, 255, 255, 0.8),
+        inset 10px 0 30px rgba(255, 182, 193, 0.4),
+        inset -10px 0 30px rgba(173, 216, 230, 0.4),
+        inset 0 -20px 30px rgba(166, 124, 0, 0.2),
+        0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
     opacity: 0;
     animation: floatUpSoap 15s infinite ease-in-out, wobble 4s infinite ease-in-out;
     will-change: bottom, transform, margin-left;
@@ -128,21 +129,21 @@ h1, h2, h3, h4, h5 {
     50% { margin-left: 20px; transform: scale(1.05); }
 }
 
-.bubble1 { width: 60px; height: 60px; left: 5%; animation-duration: 18s, 4s; animation-delay: 0s, 0s; }
-.bubble2 { width: 90px; height: 90px; left: 12%; animation-duration: 22s, 5s; animation-delay: 5s, 1s; }
-.bubble3 { width: 40px; height: 40px; left: 8%; animation-duration: 15s, 3s; animation-delay: 2s, 2s; }
-.bubble4 { width: 70px; height: 70px; left: 2%; animation-duration: 25s, 6s; animation-delay: 8s, 0s; }
-.bubble5 { width: 60px; height: 60px; left: 88%; animation-duration: 19s, 4.5s; animation-delay: 12s, 1.5s; }
-.bubble6 { width: 45px; height: 45px; left: 95%; animation-duration: 16s, 3.5s; animation-delay: 15s, 0.5s; }
-.bubble7 { width: 80px; height: 80px; left: 85%; animation-duration: 21s, 5s; animation-delay: 18s, 2.5s; }
-.bubble8 { width: 100px; height: 100px; left: 92%; animation-duration: 28s, 6s; animation-delay: 10s, 1s; }
-.bubble9 { width: 35px; height: 35px; left: 82%; animation-duration: 14s, 3s; animation-delay: 6s, 0s; }
-
+/* Luxurious sizes, widely varied */
+.bubble1 { width: 25px; height: 25px; left: 5%; animation-duration: 18s, 4s; animation-delay: 0s, 0s; }
+.bubble2 { width: 70px; height: 70px; left: 12%; animation-duration: 22s, 5s; animation-delay: 5s, 1s; }
+.bubble3 { width: 15px; height: 15px; left: 8%; animation-duration: 15s, 3s; animation-delay: 2s, 2s; }
+.bubble4 { width: 45px; height: 45px; left: 2%; animation-duration: 25s, 6s; animation-delay: 8s, 0s; }
+.bubble5 { width: 30px; height: 30px; left: 88%; animation-duration: 19s, 4.5s; animation-delay: 12s, 1.5s; }
+.bubble6 { width: 80px; height: 80px; left: 95%; animation-duration: 16s, 3.5s; animation-delay: 15s, 0.5s; }
+.bubble7 { width: 40px; height: 40px; left: 85%; animation-duration: 21s, 5s; animation-delay: 18s, 2.5s; }
+.bubble8 { width: 60px; height: 60px; left: 92%; animation-duration: 28s, 6s; animation-delay: 10s, 1s; }
+.bubble9 { width: 20px; height: 20px; left: 82%; animation-duration: 14s, 3s; animation-delay: 6s, 0s; }
 /* --- Language Switcher --- */
 .lang-switcher {
     position: fixed;
     top: 30px;
-    inset-inline-start: 40px; /* Logical property adapts to LTR/RTL automatically */
+    left: 40px; /* Fixed physical position so it stays in the exact same spot in both Hebrew (RTL) and English (LTR) */
     z-index: 1000;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
@@ -254,6 +255,62 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 30px;
     color: var(--water-white);
     text-shadow: 0 2px 15px rgba(0,0,0,0.6);
+}
+
+/* --- Interactive Hero Text Hover Effect (Floating) --- */
+.interactive-hero-line {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.interactive-hero-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.12); /* שקוף ועדין */
+    backdrop-filter: blur(8px); /* אפקט זכוכית */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    z-index: -1;
+    /* מתחיל למטה וקטן יותר כדי לעלות ולצוף */
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.interactive-hero-line:hover {
+    /* הטקסט כולו צף כלפי מעלה */
+    transform: translateY(-12px);
+    text-shadow: 0 8px 25px rgba(0, 0, 0, 0.7) !important;
+}
+
+.interactive-hero-line:hover::before {
+    /* הרקע מחליק למעלה ומופיע */
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.hero-provider-name.interactive-hero-line:hover {
+    color: var(--warm-peach-light) !important;
+    font-weight: 900 !important;
+}
+
+h1.interactive-hero-line:hover {
+    color: var(--primary-blue) !important;
+    font-weight: 800 !important;
+}
+
+h2.interactive-hero-line:hover {
+    color: var(--primary-blue) !important;
+    font-weight: 700 !important;
 }
 
 .hero-text-minimal .accent-line {
@@ -542,28 +599,151 @@ h1, h2, h3, h4, h5 {
     stroke: #e91e63 !important; /* Hot pink! */
 }
 
+/* Base hover state for all animated paths, ensuring they become white */
 .drop-card:hover .animated-path {
-    stroke: #ffffff !important; /* Becomes white on hover */
+    stroke: #ffffff !important;
+}
+
+/* Continuous curling/flowing effect for standard abstract lines (looks like a moving video) */
+.drop-card:hover .draw-line-svg:not(.hands-and-heart-svg) .animated-path {
+    stroke-dasharray: 40 20;
+    animation: curlFlow 1.5s linear infinite;
+}
+
+@keyframes curlFlow {
+    0% { stroke-dashoffset: 60; }
+    100% { stroke-dashoffset: 0; }
+}
+
+/* Add a gentle infinite sway to the SVG itself */
+.drop-card:hover .draw-line-svg:not(.hands-and-heart-svg) {
+    animation: gentleSway 3s ease-in-out infinite alternate;
+}
+
+@keyframes gentleSway {
+    0% { transform: rotate(-3deg) scale(1); }
+    100% { transform: rotate(3deg) scale(1.05); }
+}
+
+/* Bubbles rising inside the wheel hole on hover */
+.drop-card:hover .line-art-wrapper::before,
+.drop-card:hover .line-art-wrapper::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 60%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.drop-card:hover .line-art-wrapper::before {
+    width: 14px;
+    height: 14px;
+    left: 15%;
+    bottom: -15px;
+    box-shadow: 15px -25px 0 -3px rgba(255,255,255,0.5), -10px -40px 0 -5px rgba(255,255,255,0.4);
+    animation: holeBubbleUp 2s ease-in infinite;
+}
+
+.drop-card:hover .line-art-wrapper::after {
+    width: 10px;
+    height: 10px;
+    right: 20%;
+    bottom: -20px;
+    box-shadow: -12px -20px 0 -2px rgba(255,255,255,0.6), 15px -35px 0 -4px rgba(255,255,255,0.4);
+    animation: holeBubbleUp 2.5s ease-in infinite;
+    animation-delay: 0.7s;
+}
+
+@keyframes holeBubbleUp {
+    0% {
+        transform: translateY(0) scale(0.6);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-70px) scale(1.2);
+        opacity: 0;
+    }
 }
 
 .is-visible .animated-path {
     stroke-dashoffset: 0;
 }
 
+/* Hands and Heart Hover Animation */
+.hands-and-heart-svg .hand-outer-left,
+.hands-and-heart-svg .hand-inner-left {
+    transform-origin: right bottom;
+    transform-box: fill-box;
+    transition: transform 0.6s var(--luxury-ease), stroke-dashoffset 2s var(--luxury-ease), stroke 0.6s var(--luxury-ease);
+}
+
+.hands-and-heart-svg .hand-outer-right,
+.hands-and-heart-svg .hand-inner-right {
+    transform-origin: left bottom;
+    transform-box: fill-box;
+    transition: transform 0.6s var(--luxury-ease), stroke-dashoffset 2s var(--luxury-ease), stroke 0.6s var(--luxury-ease);
+}
+
+.hands-and-heart-svg .flying-heart {
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: all 0.6s var(--luxury-ease);
+}
+
+.drop-card:hover .hands-and-heart-svg .hand-outer-left,
+.drop-card:hover .hands-and-heart-svg .hand-inner-left {
+    transform: rotate(-35deg);
+    animation: handSwayLeft 2s ease-in-out infinite alternate;
+}
+@keyframes handSwayLeft {
+    0% { transform: rotate(-35deg); }
+    100% { transform: rotate(-25deg); }
+}
+
+.drop-card:hover .hands-and-heart-svg .hand-outer-right,
+.drop-card:hover .hands-and-heart-svg .hand-inner-right {
+    transform: rotate(35deg);
+    animation: handSwayRight 2s ease-in-out infinite alternate;
+}
+@keyframes handSwayRight {
+    0% { transform: rotate(35deg); }
+    100% { transform: rotate(25deg); }
+}
+
+.drop-card:hover .hands-and-heart-svg .flying-heart {
+    transform: translateY(-25px) scale(1.5);
+    fill: rgba(255, 255, 255, 0.4);
+    animation: heartBeatHover 1s ease-in-out infinite alternate;
+}
+@keyframes heartBeatHover {
+    0% { transform: translateY(-25px) scale(1.5); fill: rgba(255, 255, 255, 0.4); }
+    100% { transform: translateY(-28px) scale(1.7); fill: rgba(255, 255, 255, 0.6); }
+}
+
 /* Old h4 styling removed to keep titles as clean marker text on the float */
 
 .primary-cta {
-    background: var(--deep-water);
+    background: rgba(61, 90, 128, 0.35);
+    backdrop-filter: blur(8px);
     color: var(--white);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 15px rgba(74, 63, 53, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(61, 90, 128, 0.15);
 }
 
 .primary-cta:hover {
-    background: var(--white);
-    color: var(--deep-water);
-    border-color: var(--white);
-    box-shadow: 0 8px 25px rgba(74, 63, 53, 0.4);
+    background: var(--deep-water);
+    color: var(--white);
+    border-color: var(--deep-water);
+    box-shadow: 0 8px 25px rgba(61, 90, 128, 0.5);
 }
 
 .drop-card p {
@@ -611,6 +791,8 @@ h1, h2, h3, h4, h5 {
     display: flex;
     align-items: center;
     gap: 50px;
+    position: relative;
+    z-index: 2;
 }
 
 .provider-info {
@@ -661,8 +843,27 @@ h1, h2, h3, h4, h5 {
     padding: 15px 25px;
     border-radius: 12px;
     display: inline-block;
-    box-shadow: none;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
     border: 2px solid var(--luxury-gold);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: default;
+}
+
+.provider-info .title:hover {
+    background: var(--luxury-gold);
+    color: var(--white);
+    animation: gentleWaterFloat 4s ease-in-out infinite;
+}
+
+@keyframes gentleWaterFloat {
+    0%, 100% {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(166, 124, 0, 0.2);
+    }
+    50% {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 35px rgba(166, 124, 0, 0.35);
+    }
 }
 
 .align-right {
@@ -673,6 +874,87 @@ h1, h2, h3, h4, h5 {
     font-size: 1.15rem;
     color: var(--text-light);
     line-height: 1.8;
+}
+
+/* --- Interactive Provider JPG Animations --- */
+.interactive-provider {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.provider-main-img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 95, 115, 0.1);
+    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.interactive-provider:hover .provider-main-img {
+    transform: translateY(-15px) scale(1.05) rotate(1deg);
+    box-shadow: 0 25px 50px rgba(166, 124, 0, 0.35); /* Gold halo */
+}
+
+/* Floating Heart Bubbles */
+.heart-bubbles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.hb {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    color: #e91e63;
+    font-size: 24px;
+    opacity: 0;
+    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+    transform: translate(-50%, 0) scale(0);
+}
+
+.interactive-provider:hover .hb {
+    animation: floatHeartBubble 2.5s ease-in infinite;
+}
+
+.hb1 { left: 45%; animation-delay: 0s !important; color: #f28482; font-size: 20px; }
+.hb2 { left: 55%; animation-delay: 0.4s !important; color: #a8dadc; font-size: 28px; }
+.hb3 { left: 40%; animation-delay: 0.8s !important; color: #e91e63; font-size: 18px; }
+.hb4 { left: 60%; animation-delay: 1.2s !important; color: #ff8a65; font-size: 22px; }
+.hb5 { left: 50%; animation-delay: 1.6s !important; color: #00bcd4; font-size: 26px; }
+.hb6 { left: 48%; animation-delay: 2.0s !important; color: #f4978e; font-size: 16px; }
+
+@keyframes floatHeartBubble {
+    0% {
+        transform: translate(-50%, 0) scale(0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+        transform: translate(-60%, -40px) scale(1);
+    }
+    50% {
+        transform: translate(-40%, -80px) scale(1.2);
+    }
+    80% {
+        opacity: 0.6;
+        transform: translate(-55%, -120px) scale(1);
+    }
+    100% {
+        transform: translate(-50%, -160px) scale(0.5);
+        opacity: 0;
+    }
 }
 
 .benefit-list {
@@ -789,7 +1071,7 @@ h1, h2, h3, h4, h5 {
     background: url('assets/pure_water.jpg') no-repeat;
     background-size: 120% 120%;
     animation: waterFlow 40s ease-in-out infinite alternate;
-    opacity: 0.08; /* Extremely transparent layer, very subtle */
+    opacity: 0.15; /* Balanced transparency - visible but subtle */
     z-index: 0; /* Under the gradient (z-index 1) but over the static background image */
     pointer-events: none;
 }
@@ -975,6 +1257,49 @@ h1, h2, h3, h4, h5 {
     text-shadow: 0 2px 5px rgba(255,255,255,0.9);
 }
 
+/* --- Interactive Footer Hover Effect (Floating Pink Glass) --- */
+.interactive-footer-line {
+    position: relative;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+    cursor: pointer;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.interactive-footer-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Luxurious transparent gold glass */
+    background: linear-gradient(135deg, rgba(191, 149, 63, 0.15), rgba(252, 246, 186, 0.15));
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(191, 149, 63, 0.3);
+    border-radius: 15px;
+    z-index: -1;
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 15px 35px rgba(166, 124, 0, 0.15);
+}
+
+.interactive-footer-line:hover {
+    transform: translateY(-12px);
+    color: #a67c00 !important; /* Luxury Gold */
+    text-shadow: 0 4px 20px rgba(255, 255, 255, 0.6) !important;
+}
+
+.interactive-footer-line:hover::before {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
 .phone-wrapper {
     margin-bottom: 30px;
 }
@@ -1015,6 +1340,47 @@ h1, h2, h3, h4, h5 {
     text-shadow: 0 1px 3px rgba(255,255,255,0.8);
 }
 
+/* --- Interactive Gold Footer Notes --- */
+.interactive-gold-line {
+    position: relative;
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+    cursor: default;
+}
+
+.interactive-gold-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Subtle Gold Background */
+    background: linear-gradient(135deg, rgba(191, 149, 63, 0.15), rgba(252, 246, 186, 0.15));
+    border: 1px solid rgba(191, 149, 63, 0.3);
+    border-radius: 8px;
+    z-index: -1;
+    /* Expanding animation - start small */
+    transform: scaleX(0.9) scaleY(0.7);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.interactive-gold-line:hover {
+    transform: scale(1.02);
+    color: #a67c00 !important; /* Luxury Gold */
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.9) !important;
+}
+
+.interactive-gold-line:hover::before {
+    transform: scaleX(1) scaleY(1);
+    opacity: 1;
+    box-shadow: 0 4px 15px rgba(166, 124, 0, 0.15);
+}
+
 .copyright {
     position: relative;
     z-index: 2;
@@ -1031,3 +1397,227 @@ h1, h2, h3, h4, h5 {
     .contact-container { padding: 40px 20px; }
 }
 
+/* --- Language Specific Overrides --- */
+html[lang="en"] .title-animation-wrapper h4 {
+    font-size: 1.15rem;
+    white-space: nowrap;
+    top: -5px;
+}
+
+html[lang="en"] .drop-card p {
+    font-size: 0.95rem;
+    max-width: 58%;
+}
+
+/* --- Water Stream Animation --- */
+.water-stream-container {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 0 0 50px 50px;
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.stream-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path fill="rgba(168,218,220,0.8)" d="M0,50 C150,80 350,20 500,50 C650,80 850,20 1000,50 L1000,100 L0,100 Z"></path></svg>');
+    background-size: 50% 100%;
+    animation: slideWave 8s linear infinite;
+    margin: 0;
+    border-radius: 0;
+    opacity: 1;
+}
+
+.stream-wave.stream-pink {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path fill="rgba(242,132,130,0.3)" d="M0,60 C150,30 350,90 500,60 C650,30 850,90 1000,60 L1000,100 L0,100 Z"></path></svg>');
+    animation: slideWave 12s linear infinite reverse;
+    bottom: 0;
+    opacity: 1;
+}
+
+@keyframes slideWave {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.stream-bubble {
+    position: absolute;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.1) 40%, rgba(255, 255, 255, 0) 60%);
+    box-shadow: 
+        inset 0 0 20px rgba(255, 255, 255, 0.8),
+        inset 10px 0 20px rgba(255, 182, 193, 0.4),
+        inset -10px 0 20px rgba(173, 216, 230, 0.4),
+        inset 0 -15px 20px rgba(166, 124, 0, 0.2),
+        0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    will-change: transform, opacity;
+}
+
+@keyframes streamBubbleFlow {
+    0% {
+        transform: translate(0, 0) scale(0);
+        opacity: 0;
+    }
+    10% {
+        transform: translate(calc(var(--drift-x-end) * 0.1), var(--bob-y)) scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translate(calc(var(--drift-x-end) * 0.5), calc(var(--bob-y) * -1)) scale(1.05);
+        opacity: 0.9;
+    }
+    90% {
+        transform: translate(calc(var(--drift-x-end) * 0.9), var(--bob-y)) scale(1);
+        opacity: 0.9;
+    }
+    100% {
+              transform: translate(var(--drift-x-end), 0) scale(0);
+        opacity: 0;
+    }
+}
+
+/* --- Wave Letter Animation --- */
+.hover-wave-text {
+    cursor: pointer;
+}
+
+.hover-wave-text .wave-letter {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hover-wave-text:hover .wave-letter {
+    animation: waveLetter 1s ease-in-out infinite;
+    color: var(--luxury-gold);
+}
+
+.hover-wave-text.no-color:hover .wave-letter {
+    color: inherit;
+}
+
+@keyframes waveLetter {
+    0%, 100% { transform: translateY(0) rotate(var(--base-rotate, 0deg)); }
+    50% { transform: translateY(-8px) rotate(var(--base-rotate, 0deg)); }
+}
+
+/* --- Registration Modal (Frosted Glass) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/hero_bg.jpg') center/cover no-repeat;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px); /* Lighter frosted glass effect so pool is visible */
+    z-index: 0;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(255,255,255,0.5);
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--deep-water);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--warm-peach);
+    transform: rotate(90deg);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--deep-water);
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--warm-peach);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 15px rgba(242, 132, 130, 0.4);
+}
