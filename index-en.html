@@ -8,7 +8,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700&family=Varela+Round&family=Gveret+Levin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,8 +18,19 @@
         <a href="index-en.html" class="active">En</a> <span class="divider">|</span> <a href="index.html">עב</a>
     </div>
 
-    <!-- Global Animated Background -->
     <div class="water-background">
+        <div class="overlay"></div>
+        
+        <!-- Morphing SVG Blobs for luxury pampering effect -->
+        <div class="morph-container">
+            <svg class="morph-blob blob1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                <path d="M410.5,334.5Q371,419,271.5,431.5Q172,444,116,356.5Q60,269,114.5,178Q169,87,272,83Q375,79,412.5,164.5Q450,250,410.5,334.5Z" fill="var(--warm-peach-light)"/>
+            </svg>
+            <svg class="morph-blob blob2" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                <path d="M439,301.5Q386,353,318,409.5Q250,466,160.5,417.5Q71,369,63.5,268.5Q56,168,141.5,108.5Q227,49,328,68Q429,87,460.5,168.5Q492,250,439,301.5Z" fill="var(--light-blue)"/>
+            </svg>
+        </div>
+        
         <!-- Floating Bubbles -->
         <div class="bubbles-container">
             <div class="bubble bubble1"></div>
@@ -29,34 +40,32 @@
             <div class="bubble bubble5"></div>
             <div class="bubble bubble6"></div>
             <div class="bubble bubble7"></div>
-            <div class="bubble bubble8"></div>
-            <div class="bubble bubble9"></div>
         </div>
     </div>
 
-    <header class="hero-banner section" id="home">
+    <header class="hero-banner section clip-transition" id="home">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <div class="hero-text-minimal animate-on-scroll fade-up-slow">
-                <span class="hero-provider-name" style="display:block; font-size: 2.8rem; font-weight: 800; color: #e91e63; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Chava Rivka Landau</span>
+                <span class="hero-provider-name" style="display:block; font-size: 2.4rem; font-weight: 400; color: var(--warm-peach); margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Chava Rivka Landau</span>
                 <h1 style="margin-top: 0;">Prenatal Hydrotherapy</h1>
                 <div class="accent-line"></div>
-                <h2>Half an hour of calm, relief, and preparation in the water</h2>
+                <h2>An hour of calm, relief, and preparation in the water</h2>
                 <a href="#contact" class="cta-button primary-cta mt-4">Book a Session</a>
             </div>
         </div>
     </header>
 
-    <section class="provider section">
+    <section class="provider section clip-transition">
         <div class="container animate-on-scroll fade-up-slow">
             <div class="provider-content">
                 <div class="provider-split">
                     <div class="provider-info">
-                        <h2 class="handwritten" style="font-size: 3.5rem; color: #e91e63;">Nice to meet you, I am Chava Rivka Landau.</h2>
+                        <h2>Nice to meet you, I am Chava Rivka Landau.</h2>
                         <p class="title">A mother and grandmother, certified hydrotherapist, and expert in prenatal water therapy.</p>
                         <div class="accent-line align-right"></div>
                         <p class="bio-short">
-                            My goal is simple: to grant you half an hour of weightlessness, absolute quiet, and physical and mental preparation for childbirth. For me, water is the most powerful tool to relieve pressure from the back and pelvis, release pre-birth anxieties, and teach you how to truly breathe and let go. I have created a safe, embracing space for you – come disconnect from everything, trust your body, and arrive at the delivery room with calmness and empowerment.
+                            My goal is simple: to grant you an hour of weightlessness, absolute quiet, and physical and mental preparation for childbirth. For me, water is the most powerful tool to relieve pressure from the back and pelvis, release pre-birth anxieties, and teach you how to truly breathe and let go. I have created a safe, embracing space for you – come disconnect from everything, trust your body, and arrive at the delivery room with calmness and empowerment.
                         </p>
                     </div>
                     <div class="provider-image">
@@ -69,26 +78,16 @@
 
     <section class="benefits section clip-transition" id="benefits">
         <div class="container">
-            <h3 class="section-title animate-on-scroll fade-up-slow">The Treatment & Pampering Experience<span style="color: #e91e63; font-weight: 900; font-size: 1.2em; display: inline-block; transform: rotate(5deg);">!</span></h3>
+            <h3 class="section-title animate-on-scroll fade-up-slow">The Treatment & Pampering Experience</h3>
             <div class="drops-grid">
                 
                 <div class="drop-card animate-on-scroll stagger-card" style="--delay: 0.1s">
                     <div class="line-art-wrapper">
                         <!-- Abstract Spine / Relief line art -->
                         <svg viewBox="0 0 100 100" class="draw-line-svg">
-                            <defs>
-                                <linearGradient id="grad1-en" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#00bcd4" />
-                                    <stop offset="100%" stop-color="#005f73" />
-                                </linearGradient>
-                                <linearGradient id="grad1-pink-en" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#e91e63" />
-                                    <stop offset="100%" stop-color="#ff8a65" />
-                                </linearGradient>
-                            </defs>
-                            <path class="animated-path" d="M 30,80 Q 50,70 50,50 T 70,20" fill="none" stroke="url(#grad1-en)" stroke-width="3" stroke-linecap="round"/>
-                            <circle class="animated-path" cx="70" cy="20" r="4" fill="none" stroke="url(#grad1-en)" stroke-width="3"/>
-                            <path class="animated-path" d="M 40,90 Q 60,80 60,60 T 80,30" fill="none" stroke="url(#grad1-pink-en)" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+                            <path class="animated-path" d="M 30,80 Q 50,70 50,50 T 70,20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle class="animated-path" cx="70" cy="20" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path class="animated-path" d="M 40,90 Q 60,80 60,60 T 80,30" fill="none" stroke="var(--warm-peach)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
                         </svg>
                     </div>
                     <h4>Relief from Burden</h4>
@@ -99,18 +98,8 @@
                     <div class="line-art-wrapper">
                         <!-- Abstract Mobility / Loop line art -->
                         <svg viewBox="0 0 100 100" class="draw-line-svg">
-                            <defs>
-                                <linearGradient id="grad2-en" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#00a8cc" />
-                                    <stop offset="100%" stop-color="#007c91" />
-                                </linearGradient>
-                                <linearGradient id="grad2-pink-en" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#c2185b" />
-                                    <stop offset="100%" stop-color="#e91e63" />
-                                </linearGradient>
-                            </defs>
-                            <path class="animated-path" d="M 20,50 C 20,20 80,20 80,50 C 80,80 20,80 50,50" fill="none" stroke="url(#grad2-en)" stroke-width="3" stroke-linecap="round"/>
-                            <path class="animated-path" d="M 10,60 C 10,10 90,10 90,60 C 90,110 10,110 60,60" fill="none" stroke="url(#grad2-pink-en)" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+                            <path class="animated-path" d="M 20,50 C 20,20 80,20 80,50 C 80,80 20,80 50,50" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path class="animated-path" d="M 10,60 C 10,10 90,10 90,60 C 90,110 10,110 60,60" fill="none" stroke="var(--primary-blue)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
                         </svg>
                     </div>
                     <h4>Improved Mobility</h4>
@@ -121,8 +110,8 @@
                     <div class="line-art-wrapper">
                         <!-- Abstract Breathe / Leaf line art -->
                         <svg viewBox="0 0 100 100" class="draw-line-svg">
-                            <path class="animated-path" d="M 50,90 C 50,90 20,60 20,30 C 20,10 50,10 50,30 C 50,10 80,10 80,30 C 80,60 50,90 50,90 Z" fill="none" stroke="url(#grad1-en)" stroke-width="3" stroke-linejoin="round"/>
-                            <path class="animated-path" d="M 50,90 L 50,30" fill="none" stroke="url(#grad1-pink-en)" stroke-width="2.5" stroke-linecap="round"/>
+                            <path class="animated-path" d="M 50,90 C 50,90 20,60 20,30 C 20,10 50,10 50,30 C 50,10 80,10 80,30 C 80,60 50,90 50,90 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path class="animated-path" d="M 50,90 L 50,30" fill="none" stroke="var(--warm-peach)" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                     </div>
                     <h4>Breathing & Relaxation</h4>
@@ -133,10 +122,10 @@
                     <div class="line-art-wrapper">
                         <!-- Abstract Lightness / Wave line art -->
                         <svg viewBox="0 0 100 100" class="draw-line-svg">
-                            <path class="animated-path" d="M 10,50 Q 30,30 50,50 T 90,50" fill="none" stroke="url(#grad2-en)" stroke-width="3" stroke-linecap="round"/>
-                            <path class="animated-path" d="M 10,65 Q 30,45 50,65 T 90,65" fill="none" stroke="url(#grad2-pink-en)" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
-                            <circle class="animated-path" cx="30" cy="30" r="4" fill="none" stroke="url(#grad1-pink-en)" stroke-width="2.5"/>
-                            <circle class="animated-path" cx="70" cy="20" r="3" fill="none" stroke="url(#grad1-en)" stroke-width="2.5"/>
+                            <path class="animated-path" d="M 10,50 Q 30,30 50,50 T 90,50" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path class="animated-path" d="M 10,65 Q 30,45 50,65 T 90,65" fill="none" stroke="var(--primary-blue)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                            <circle class="animated-path" cx="30" cy="30" r="4" fill="none" stroke="var(--warm-peach)" stroke-width="1.5"/>
+                            <circle class="animated-path" cx="70" cy="20" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
                         </svg>
                     </div>
                     <h4>Feeling of Lightness</h4>
@@ -147,9 +136,9 @@
                     <div class="line-art-wrapper">
                         <!-- Abstract Care / Cradling Hands line art -->
                         <svg viewBox="0 0 100 100" class="draw-line-svg">
-                            <path class="animated-path" d="M 20,40 C 20,70 50,80 50,80 C 50,80 80,70 80,40" fill="none" stroke="url(#grad1-en)" stroke-width="3" stroke-linecap="round"/>
-                            <path class="animated-path" d="M 30,35 C 30,60 50,65 50,65 C 50,65 70,60 70,35" fill="none" stroke="url(#grad1-pink-en)" stroke-width="2.5" stroke-linecap="round"/>
-                            <circle class="animated-path" cx="50" cy="45" r="9" fill="none" stroke="url(#grad2-en)" stroke-width="2.5"/>
+                            <path class="animated-path" d="M 20,40 C 20,70 50,80 50,80 C 50,80 80,70 80,40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path class="animated-path" d="M 30,35 C 30,60 50,65 50,65 C 50,65 70,60 70,35" fill="none" stroke="var(--warm-peach)" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle class="animated-path" cx="50" cy="45" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
                         </svg>
                     </div>
                     <h4>Personal Care & Pampering</h4>
@@ -162,42 +151,39 @@
 
     <section class="testimonials section clip-transition" id="testimonials">
         <div class="container">
-            <h3 class="section-title animate-on-scroll fade-up-slow">What Our Clients Say<span style="color: #e91e63; font-weight: 900; font-size: 1.2em; display: inline-block; transform: rotate(5deg);">?</span></h3>
-            <div class="testimonials-grid memo-board">
+            <h3 class="section-title animate-on-scroll fade-up-slow">What Our Clients Say</h3>
+            <div class="testimonials-grid">
                 
-                <div class="testimonial-card memo-note animate-on-scroll stagger-card" style="--delay: 0.1s; transform: rotate(-2deg);">
-                    <div class="memo-pin"></div>
+                <div class="testimonial-card animate-on-scroll stagger-card" style="--delay: 0.1s">
                     <div class="testimonial-header peach-header">
                         <div class="quote-icon">"</div>
-                        <h4 class="testimonial-title handwritten">A lifesaver for back and pelvic pain!</h4>
+                        <h4 class="testimonial-title">A lifesaver for back and pelvic pain!</h4>
                     </div>
                     <div class="testimonial-body">
-                        <p class="testimonial-text handwritten">I suffered from lower back pain and pelvic pressure that made it hard to function in my eighth month. The moment I entered the water with Chava Rivka, <span class="highlight-yellow">I felt the heaviness just fall off me</span>. The weightlessness and her professional support eliminated the pain and allowed me to sleep through the night.</p>
-                        <p class="testimonial-author handwritten">- Michal A.</p>
+                        <p class="testimonial-text">I suffered from lower back pain and pelvic pressure that made it hard to function in my eighth month. The moment I entered the water with Chava Rivka, I felt the heaviness just fall off me. The weightlessness and her professional support eliminated the pain and allowed me to sleep through the night.</p>
+                        <p class="testimonial-author">- Michal A.</p>
                     </div>
                 </div>
 
-                <div class="testimonial-card memo-note animate-on-scroll stagger-card" style="--delay: 0.2s; transform: rotate(1.5deg);">
-                    <div class="memo-pin"></div>
+                <div class="testimonial-card animate-on-scroll stagger-card" style="--delay: 0.2s">
                     <div class="testimonial-header blue-header">
                         <div class="quote-icon">"</div>
-                        <h4 class="testimonial-title handwritten">Inner peace and anxiety relief</h4>
+                        <h4 class="testimonial-title">Inner peace and anxiety relief</h4>
                     </div>
                     <div class="testimonial-body">
-                        <p class="testimonial-text handwritten">I came to Chava Rivka full of fears and anxiety before birth. The water therapy <span class="highlight-yellow">created an inner peace I had never known</span>. Through the breathing and her steady hands, I learned to let go of fear and trust my body. Thanks to her, I entered the delivery room strong.</p>
-                        <p class="testimonial-author handwritten">- Shira T.</p>
+                        <p class="testimonial-text">I came to Chava Rivka full of fears and anxiety before birth. The water therapy created an inner peace I had never known. Through the breathing and her steady hands, I learned to let go of fear and trust my body. Thanks to her, I entered the delivery room strong.</p>
+                        <p class="testimonial-author">- Shira T.</p>
                     </div>
                 </div>
 
-                <div class="testimonial-card memo-note animate-on-scroll stagger-card" style="--delay: 0.3s; transform: rotate(-1deg);">
-                    <div class="memo-pin"></div>
+                <div class="testimonial-card animate-on-scroll stagger-card" style="--delay: 0.3s">
                     <div class="testimonial-header deep-header">
                         <div class="quote-icon">"</div>
-                        <h4 class="testimonial-title handwritten">A spa experience and pampering for the soul</h4>
+                        <h4 class="testimonial-title">A spa experience and pampering for the soul</h4>
                     </div>
                     <div class="testimonial-body">
-                        <p class="testimonial-text handwritten">You can't describe the feeling of someone wrapping you just when you need it most. This half hour a week <span class="highlight-yellow">was an island of sanity</span> during the pregnancy race. The tranquility of the water and Chava Rivka's professionalism turned every session into a premium luxury experience.</p>
-                        <p class="testimonial-author handwritten">- Dana M.</p>
+                        <p class="testimonial-text">You can't describe the feeling of someone wrapping you just when you need it most. This hour a week was an island of sanity during the pregnancy race. The tranquility of the water and Chava Rivka's professionalism turned every session into a premium luxury experience.</p>
+                        <p class="testimonial-author">- Dana M.</p>
                     </div>
                 </div>
 
@@ -207,13 +193,13 @@
 
     <footer class="contact section clip-transition" id="contact">
         <div class="container contact-container animate-on-scroll fade-up-slow">
-            <h3 class="contact-headline">Give yourself half an hour of calm and lightness</h3>
+            <h3>Give yourself an hour of calm and lightness</h3>
             <div class="phone-wrapper">
-                <a href="tel:0548498906" class="phone-number pulse-animation">
+                <a href="tel:0548498906" class="phone-number">
                     <span class="phone-text">054-849-8906</span>
                 </a>
             </div>
-            <p class="footer-note">Treatments take place in a therapeutic pool in Beit Shemesh.<br>I am here to embrace you, with love and professionalism.</p>
+            <p class="footer-note">I am here to embrace you, with love and professionalism.</p>
         </div>
         <div class="copyright">
             <p class="disclaimer" style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 10px;">* The images of the pools on this site are for illustration purposes only.</p>
