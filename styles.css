@@ -756,7 +756,7 @@ h2.interactive-hero-line:hover {
 /* --- Provider Section --- */
 .provider {
     position: relative;
-    padding: 220px 0 100px 0; /* Lowered the square to reveal the plant in the hero banner! */
+    padding: 270px 0 100px 0; /* Lowered the square further down to match the user's request */
 }
 
 .provider::before {
@@ -776,19 +776,19 @@ h2.interactive-hero-line:hover {
 }
 
 .provider-content {
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 50px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
+    background: rgba(255, 249, 235, 0.55); /* Yellowish pearl white tint (לבן פנינה צהבהב) */
+    border-radius: 40px; /* Slightly smaller radius to match the reduced size */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    max-width: 850px; /* Shrunk width */
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-top: 1px solid rgba(255, 255, 255, 0.8);
-    border-right: 1px solid rgba(255, 255, 255, 0.8);
-    padding: 80px;
+    backdrop-filter: blur(8px); /* Slight bump to blur to give it a solid glass feel without making it murky */
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.95);
+    border-right: 1px solid rgba(255, 255, 255, 0.95);
+    padding: 15px 40px; /* Further shrunk padding to make the glass significantly smaller and less tall */
 }
 
 .provider-split {
@@ -842,13 +842,14 @@ h2.interactive-hero-line:hover {
     font-size: 1.4rem;
     color: var(--luxury-gold);
     font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 25px;
+    margin-top: 5px; /* Reduced to pull text closer to the main title above */
+    margin-bottom: 20px; /* Reduced bottom margin too */
     background: transparent;
     padding: 15px 25px;
     border-radius: 12px;
     display: inline-block;
     box-shadow: 0 0 0 rgba(0,0,0,0);
+
     border: 2px solid var(--luxury-gold);
     transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
     cursor: default;
@@ -876,8 +877,9 @@ h2.interactive-hero-line:hover {
 }
 
 .bio-short {
-    font-size: 1.15rem;
-    color: var(--text-light);
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    font-weight: 700;
     line-height: 1.8;
 }
 
@@ -1423,7 +1425,7 @@ html[lang="en"] .drop-card p {
     top: auto;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 250px;
     pointer-events: none;
     overflow: hidden;
     z-index: 0;
@@ -1643,7 +1645,7 @@ html[lang="en"] .drop-card p {
 }
 
 .animated-reading-box:hover {
-    background-color: #fcfcfc;
+    background-color: rgba(255, 182, 162, 0.2); /* Gentle Peach-Pink */
     border: 2px solid #1a365d; /* Luxury Blue border */
     border-radius: 12px; /* Rounded box as requested */
     padding: 1rem;
