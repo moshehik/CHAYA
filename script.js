@@ -44,4 +44,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Premium Parallax Effect for Background Elements
+    const morphContainer = document.querySelector('.morph-container');
+    const bubblesContainer = document.querySelector('.bubbles-container');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        
+        if (morphContainer) {
+            morphContainer.style.transform = `translateY(${scrolled * 0.15}px)`;
+        }
+        
+        if (bubblesContainer) {
+            bubblesContainer.style.transform = `translateY(${scrolled * 0.05}px)`;
+        }
+    });
 });
