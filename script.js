@@ -278,14 +278,18 @@ if (regForm) {
         
         const name = document.getElementById('reg-name').value;
         const phone = document.getElementById('reg-phone').value;
-        const address = document.getElementById('reg-address').value;
+        const addressElement = document.getElementById('reg-address');
+        const address = addressElement ? addressElement.value : '';
         const details = document.getElementById('reg-details').value;
         
-        const bodyText = `בקשת הרשמה חדשה:
+        let bodyText = `בקשת הרשמה חדשה:
 שם: ${name}
-טלפון: ${phone}
-כתובת: ${address}
-פירוט: ${details}`;
+טלפון: ${phone}`;
+
+        if (address) {
+            bodyText += `\nכתובת: ${address}`;
+        }
+        bodyText += `\nפירוט: ${details}`;
 
         // Using existing sendEmail logic
         const result = await sendEmail({
