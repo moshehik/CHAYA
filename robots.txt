@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chavarivkalandauhydrotherapy.co.il/sitemap.xml
