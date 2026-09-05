@@ -797,19 +797,34 @@ h2.interactive-hero-line:hover {
     gap: 50px;
     position: relative;
     z-index: 2;
-    margin-top: -25px; /* Pull content closer to the title above */
+    margin-top: 25px; /* Symmetric with the 25px gap below the title box (.align-right) */
 }
 
 .provider-info {
     flex: 0 0 48%;
     max-width: 48%;
     text-align: start;
+    align-self: flex-start; /* Anchor to the top of the row so the title box never shifts upward when the paragraph below it grows on hover */
 }
 
 .provider-image {
     flex: 0 0 60%;
     max-width: 700px;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .provider-split {
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 30px;
+    }
+
+    .provider-info,
+    .provider-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 .provider-image img {
@@ -1647,10 +1662,10 @@ html[lang="en"] .drop-card p {
 
 .animated-reading-box:hover {
     background-color: rgba(255, 182, 162, 0.2); /* Gentle Peach-Pink */
-    border: 2px solid #1a365d; /* Luxury Blue border */
+    border: 2px solid #f28482; /* Warm Peach (CTA button) border */
     border-radius: 12px; /* Rounded box as requested */
     padding: 1rem;
-    box-shadow: 0 4px 15px rgba(26, 54, 93, 0.2); /* Luxury Blue shadow */
+    box-shadow: 0 4px 15px rgba(242, 132, 130, 0.2); /* Warm Peach shadow */
 }
 
 .animated-reading-box span {
@@ -1664,7 +1679,7 @@ html[lang="en"] .drop-card p {
 
 @keyframes paint-text {
     to {
-        background-color: rgba(26, 54, 93, 0.95); /* Luxury Deep Blue */
+        background-color: rgba(242, 132, 130, 0.95); /* Warm Peach */
         color: #ffffff; /* White letters */
         text-shadow: 0 0 1px #ffffff, 0 0 1px #ffffff; /* Faux bold to prevent layout shift */
     }
