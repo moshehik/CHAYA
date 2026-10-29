@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הידרותרפיה עם חוה רבקה | במיוחד לנשים לפני לידה</title>
+    <meta name="description" content="חצי שעה של רוגע הרפיה ושחרור בבריכה פרטית יוקרתית בבית שמש. הידרותרפיה לכל אישה, ובמיוחד לנשים לפני לידה.">
+    <link rel="canonical" href="https://chavarivkalandauhydrotherapy.co.il/flyer/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:title" content="הידרותרפיה עם חוה רבקה | במיוחד לנשים לפני לידה">
+    <meta property="og:description" content="חצי שעה של רוגע הרפיה ושחרור בבריכה פרטית יוקרתית בבית שמש.">
+    <meta property="og:url" content="https://chavarivkalandauhydrotherapy.co.il/flyer/">
+    <meta property="og:image" content="https://chavarivkalandauhydrotherapy.co.il/flyer/preview.jpg">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body { background: #f6e9ee; }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* the flyer is one picture; two invisible links sit exactly on the gold button and on the phone number */
+        .sheet {
+            position: relative;
+            width: 100%;
+            max-width: 620px;
+            line-height: 0;
+        }
+
+        .sheet img { display: block; width: 100%; height: auto; }
+
+        .hot {
+            position: absolute;
+            display: block;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* gold button: left/top/width/height as a share of the flyer */
+        .go {
+            left: 37%;
+            top: 81.65%;
+            width: 26%;
+            height: 3.6%;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        /* gentle shine passing over the button, so it feels pressable */
+        .go::after {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 30%;
+            left: -40%;
+            background: linear-gradient(100deg, transparent, rgba(255,255,255,0.7), transparent);
+            transform: skewX(-18deg);
+            animation: shine 3.2s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0%, 55% { left: -40%; }
+            100% { left: 120%; }
+        }
+
+        .go:hover, .go:focus-visible { outline: 2px solid rgba(255,255,255,0.9); outline-offset: 2px; }
+
+        /* phone number: tap to call */
+        .tel {
+            left: 39.4%;
+            top: 92.6%;
+            width: 21.2%;
+            height: 3.1%;
+        }
+    </style>
+</head>
+<body>
+
+<main class="sheet">
+    <img src="flyer.jpg" alt="הידרותרפיה עם חוה רבקה, במיוחד לנשים לפני לידה. חצי שעה של רוגע הרפיה ושחרור בבריכה פרטית יוקרתית בבית שמש. 054-849-8906" width="1240" height="1759">
+    <a class="hot go" href="https://chavarivkalandauhydrotherapy.co.il/" aria-label="לחצי והתרשמי - מעבר לדף הנחיתה"></a>
+    <a class="hot tel" href="tel:0548498906" aria-label="חיוג ל-054-849-8906"></a>
+</main>
+
+</body>
+</html>
